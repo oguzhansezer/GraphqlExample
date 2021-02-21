@@ -1,6 +1,5 @@
-import { ApolloProvider } from "@apollo/client";
 import React from "react";
-import { StyleSheet, ScrollView, View, Text } from "react-native";
+import { ApolloProvider } from "@apollo/client";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import Router from "./src/Router";
 

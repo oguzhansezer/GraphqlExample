@@ -46,7 +46,7 @@ const Characters = ({ navigation }) => {
         <View style={styles.container}>
           <TouchableOpacity
             style={{ flexDirection: "row", alignItems: "center" }}
-            onPress={() => navigation.navigate("Detail", { id: item.id })}
+            onPress={() => navigation.navigate("Detay", { id: item.id })}
           >
             <Image
               style={styles.img}
@@ -54,7 +54,7 @@ const Characters = ({ navigation }) => {
                 uri: item.image,
               }}
             />
-            <Text>{item.name}</Text>
+            <Text style={styles.name}>{item.name}</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -64,15 +64,18 @@ const Characters = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    margin: 20,
+    margin: 25,
+    width: "100%",
   },
   img: {
-    width: 200,
-    height: 200,
-    marginVertical: 10,
+    width: 100,
+    height: 100,
     borderRadius: 20,
-    marginRight: 5,
+    marginRight: 10,
+  },
+  name: {
+    display: "flex",
+    fontSize: 20,
   },
 });
 

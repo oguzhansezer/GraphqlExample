@@ -37,41 +37,41 @@ const Detail = ({ route }) => {
       </View>
     );
   } else {
-  }
-  const { image, name, species, gender } = data.character;
-  const planet = data.character.origin.name;
-  return (
-    <View style={styles.container}>
-      <View style={{ borderBottomColor: "#909497", borderBottomWidth: 1 }}>
-        <Image
-          style={styles.img}
-          source={{
-            uri: image,
-          }}
-        />
-      </View>
-      <View style={{ alignItems: "center" }}>
-        <View style={{ margin: 10, padding: 10 }}>
-          <View style={[styles.contain, { marginBottom: 20 }]}>
-            <Text style={styles.textLabel}>İsmi</Text>
-            <Text style={styles.text}>{name}</Text>
-          </View>
-          <View style={[styles.contain, { marginBottom: 20 }]}>
-            <Text style={styles.textLabel}>Irkı</Text>
-            <Text style={styles.text}>{species}</Text>
-          </View>
-          <View style={[styles.contain, { marginBottom: 20 }]}>
-            <Text style={styles.textLabel}>Cinsiyeti</Text>
-            <Text style={styles.text}>{gender}</Text>
-          </View>
-          <View style={styles.contain}>
-            <Text style={styles.textLabel}>Gezegeni</Text>
-            <Text style={styles.text}>{planet}</Text>
+    const { image, name, species, gender } = data.character;
+    const planet = data.character.origin.name;
+    return (
+      <View style={styles.container}>
+        <View style={{ borderBottomColor: "#909497", borderBottomWidth: 1 }}>
+          <Image
+            style={styles.img}
+            source={{
+              uri: image,
+            }}
+          />
+        </View>
+        <View style={{ alignItems: "center" }}>
+          <View style={{ margin: 10, padding: 10 }}>
+            <View style={[styles.contain, { marginBottom: 20 }]}>
+              <Text style={styles.textLabel}>İsmi</Text>
+              <Text style={styles.text}>{name}</Text>
+            </View>
+            <View style={[styles.contain, { marginBottom: 20 }]}>
+              <Text style={styles.textLabel}>Irkı</Text>
+              <Text style={styles.text}>{species}</Text>
+            </View>
+            <View style={[styles.contain, { marginBottom: 20 }]}>
+              <Text style={styles.textLabel}>Cinsiyeti</Text>
+              <Text style={styles.text}>{gender}</Text>
+            </View>
+            <View style={styles.contain}>
+              <Text style={styles.textLabel}>Gezegeni</Text>
+              <Text style={styles.text}>{planet}</Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  );
+    );
+  }
 };
 
 const styles = StyleSheet.create({
